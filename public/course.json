@@ -1,0 +1,83 @@
+[
+    {
+       " id":" 1",
+        "image": "https://www.acelema.com/blog/wp-content/uploads/2022/07/1_5IYtIe5OwxeoYXi226J-Uw.jpeg",
+        "category": "Web Design",
+       " title": "The Complete Web Design Course",
+        "rating": 4.9,
+        "participants": 100,
+        "price": 105
+      },
+      {
+       " id": "2",
+        "image": "https://www.peerbits.com/static/6c4dcb6b85772db4b733e5eec6ccf308/77381/full-stack-development-main.jpg",
+        "category": "Web Development",
+       " title": "FullStack Web Development Course",
+        "rating": 4.8,
+        "participants": 650,
+        "price": 125
+      },
+      {
+       " id": "3",
+        "image": "https://blog.eduonix.com/wp-content/uploads/2018/09/Scientific-Python-Scipy-696x500.jpg",
+        "category": "Web Development",
+       " title": "Python Beginner to Advanced Course",
+        "rating": 4.9,
+        "participants": 130,
+        "price": 99
+      },
+      {
+       " id": "4",
+        "image": "https://miro.medium.com/v2/resize:fit:682/1*j7TiBo6BraFMeXme9BHCcw.jpeg",
+        "category": "Web Design",
+       " title": "UI/UX Design Crazy Course With Harrys",
+        "rating": 4.7,
+        "participants": 630,
+        "price":85
+      },
+      {
+       " id": "5",
+        "image": "https://miro.medium.com/v2/resize:fit:1000/1*HWNPwEQXQktLwbemoEjLPg.jpeg",
+        "category": "AI Development",
+       " title": "AI Development With Python (complete beginner course)",
+        "rating": 4.9,
+        "participants": 150,
+        "price": 105
+      },
+      {
+       " id": "6",
+        "image":"https://d1m75rqqgidzqn.cloudfront.net/wp-data/2020/07/13022153/BLOG-Images_7-7-2020-06.png",
+        "category": "Web Design",
+       " title": "C Programming",
+        "rating": 4.9,
+        "participants": 200,
+        "price": 105
+      },
+      {
+       " id": "7",
+        "image": "https://images.prismic.io//intuzwebsite/2caf3e7f-1704-42e2-908f-3d089da3e3ac_The+Ultimate+Guide+to+Android+App+Development.png?w=1200&q=75&auto=format,compress&fm=png8",
+        "category": "Web Design",
+       " title": "Android App Development",
+        "rating": 4.9,
+        "participants": 50,
+        "price": 105
+      },
+      {
+       " id": "8",
+        "image":"https://img-c.udemycdn.com/course/750x422/5167442_873c.jpg",
+        "category": "Web Design",
+       " title": "MySQL",
+        "rating": 4.9,
+        "participants": 200,
+        "price": 105
+      },
+      {
+       " id": "9",
+        "image":"https://www.forbesindia.com/media/images/2023/Sep/img_218619_algorithm.jpg",
+        "category": "Programming",
+       " title": "Algorithm",
+        "rating": 4.6,
+        "participants": 300,
+        "price": 155
+      }
+]

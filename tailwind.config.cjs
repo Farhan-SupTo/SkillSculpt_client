@@ -4,6 +4,9 @@ module.exports = {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
   theme: {
     fontFamily: {
       Poppins: "Poppins"
@@ -29,8 +32,9 @@ module.exports = {
     screens: {
       xs: "480px",
       sm: "768px",
-      md: "1060px",
+      md: "1280px",
+      
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

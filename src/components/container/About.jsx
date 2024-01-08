@@ -19,7 +19,7 @@ const About = () => {
             eum, explicabo quos eos magni vel corporis voluptatibus, inventore
             doloremque aliquam pariatur recusandae.
           </p>
-          <button className="py-3 px-6 text-sm border border-solid border-gray rounded-lg font-bold">
+          <button className="py-3 px-6 text-sm border border-solid border-gray rounded-lg font-bold hover:bg-gray hover:text-white">
             Know More
           </button>
         </div>

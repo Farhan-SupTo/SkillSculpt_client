@@ -2,6 +2,10 @@ import React from "react";
 import hero from "../../assets/hero.png";
 import { logos } from "../../Data";
 import { motion } from "framer-motion";
+import About from "./About";
+import Courses from "./Course/Courses";
+import Teacher from "./Teacher";
+import Contact from "./Contact";
 const Home = () => {
   const container = {
     hidden: {
@@ -69,7 +73,12 @@ const Home = () => {
           ))}
         </motion.div>
       </div>
+      <About></About>
+     <Courses></Courses>
+     <Teacher></Teacher>
+     <Contact />
     </div>
+    
   );
 };
 

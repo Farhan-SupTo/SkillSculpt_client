@@ -1,10 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { navLinks } from "../../Data";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
-import MobileNavLinks from "./MobileNavLinks";
-import NavLink from "./NavLink";
+// import MobileNavLinks from "./MobileNavLinks";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Navbar = () => {
+
+
+  const navOption = (
+    <ul className="md:flex md:space-x-9 font-medium">
+      <li>
+        <Link className="hover:text-teal-700" to="/">Home</Link>
+      </li>
+      <li>
+        <Link className="hover:text-teal-700" to="/blog">Blog</Link>
+      </li>
+      <li>
+        <Link className="hover:text-teal-700" to="/courses">Our Courses</Link>
+      </li>
+      <li>
+        <Link className="hover:text-teal-700" to="/admin/dashboard">Teacher</Link>
+      </li>
+      <li>
+        <Link className="hover:text-teal-700" to="/order/salad">Contact</Link>
+      </li>
+    </ul>
+  );
+
+
+  
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState(null);
   useEffect(() => {
@@ -32,15 +55,13 @@ const Navbar = () => {
               onClick={() => setToggle(true)}
             />
             <div className="text-xl text-Teal uppercase tracking-wide font-bold">
-              Skillex
+           SkillSculpt
             </div>
           </div>
           <div className="sm:flex items-center hidden">
-            {navLinks.map((navLink) => {
-              return <NavLink key={navLink.id} {...navLink} />;
-            })}
+           {navOption}
           </div>
-          <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg border-gray">
+          <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg border-gray hover:bg-teal-700 hover:text-white hover:border-none">
             Sign Up
           </button>
           {toggle && (
@@ -48,17 +69,9 @@ const Navbar = () => {
               initial={{ x: -500, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="fixed h-full w-96 top-0 left-0 z-20 bg-Teal text-white flex flex-col justify-center items-center shadow-lg gap-8 py-8"
+              className="fixed h-44 w-full top-0 left-0 z-20 bg-Teal text-white flex  px-2 flex-col justify-center items-center shadow-lg"
             >
-              {navLinks.map((navLink) => {
-                return (
-                  <MobileNavLinks
-                    key={navLink.id}
-                    {...navLink}
-                    setToggle={setToggle}
-                  />
-                );
-              })}
+         {navOption}
               <HiX
                 className="absolute right-12 top-12 text-3xl cursor-pointer"
                 onClick={(prev) => setToggle(!prev)}
