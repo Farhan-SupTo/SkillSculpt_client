@@ -1,13 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
-// import MobileNavLinks from "./MobileNavLinks";
+import { FaShoppingBag } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProviders/AuthProviders";
+import UseCart from "../../Hooks/UseCart";
+
+
 const Navbar = () => {
+
+  const { user, logOut } = useContext(AuthContext);
+  const [cart] =UseCart()
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
 
   const navOption = (
-    <ul className="md:flex md:space-x-9 font-medium">
+    <ul className="md:flex md:space-x-9 font-medium text-lg items-center">
       <li>
         <Link className="hover:text-teal-700" to="/">Home</Link>
       </li>
@@ -18,11 +32,47 @@ const Navbar = () => {
         <Link className="hover:text-teal-700" to="/courses">Our Courses</Link>
       </li>
       <li>
-        <Link className="hover:text-teal-700" to="/admin/dashboard">Teacher</Link>
+        <Link className="hover:text-teal-700" to="/contact">Contact</Link>
       </li>
       <li>
-        <Link className="hover:text-teal-700" to="/order/salad">Contact</Link>
+        <Link className="hover:text-teal-700" to="/secret">Secret</Link>
       </li>
+
+      <li>
+        <Link>
+        <button className="btn">
+        <FaShoppingBag className="h-10 text-teal-600 text-lg"></FaShoppingBag>
+  <div className="badge badge-secondary">+{cart?.length || 0}</div>
+</button>
+        
+        </Link>
+      </li>
+      {user ? 
+        <>
+          <li>
+            <span>{user?.displayName}</span>
+          </li>
+          <li>
+          <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg border-gray hover:bg-teal-700 hover:text-white hover:border-none">
+          <Link onClick={handleLogOut}>
+              LogOut
+            </Link>
+          </button>
+           
+          </li>
+        </>
+       : 
+        <>
+          <li>
+         <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg border-gray hover:bg-teal-700 hover:text-white hover:border-none">
+       
+            <Link to="/login">Sign in</Link>
+          
+          </button>
+          </li>
+         
+        </>
+      }
     </ul>
   );
 
@@ -61,9 +111,7 @@ const Navbar = () => {
           <div className="sm:flex items-center hidden">
            {navOption}
           </div>
-          <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg border-gray hover:bg-teal-700 hover:text-white hover:border-none">
-            Sign Up
-          </button>
+        
           {toggle && (
             <motion.div
               initial={{ x: -500, opacity: 0 }}

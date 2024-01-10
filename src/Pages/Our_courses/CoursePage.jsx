@@ -12,9 +12,19 @@ const CoursePage = () => {
         })
     },[])
     return (
-        <div className=''>
-            <CourseCard courses={courses} headline='Our Courses'></CourseCard>
+
+        <section>
+            <h2 className='text-5xl font-bold text-black text-center my-5'>Our Courses</h2>
+            <div className='grid sm:grid-cols-1 md:grid-cols-3 my-7 gap-6'>
+            
+            {
+                courses.map(course=> <CourseCard key={course._id} course={course}></CourseCard>)
+            }
+            
         </div>
+        </section>
+        
+     
     );
 };
 

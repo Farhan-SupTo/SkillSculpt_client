@@ -3,7 +3,11 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import Blog from '../components/Blog/Blog';
 import Home from '../components/container/Home';
-import Our_courses from '../components/Our_courses/Our_courses';
+import Our_courses from '../Pages/Our_courses/Our_courses';
+import Login from '../Pages/Login/Login';
+import SignUp from '../Pages/SignUp/SignUp';
+import PrivateRoute from './PrivateRoute';
+import Secret from '../components/Secret/Secret';
 
 export const router =createBrowserRouter([
     {
@@ -12,7 +16,7 @@ export const router =createBrowserRouter([
         children:[
             {
                 path: "/",
-                element: <Home></Home>
+                element:<Home></Home>
             },
             {
                 path:'/blog',
@@ -20,7 +24,19 @@ export const router =createBrowserRouter([
             },
             {
                 path:'/courses',
-                element:<Our_courses></Our_courses>
+                element: <Our_courses></Our_courses>
+            },
+            {
+                path:'login',
+                element: <Login></Login>
+            },
+            {
+                path:'signup',
+                element: <SignUp></SignUp>
+            },
+            {
+                path:'secret',
+                element: <PrivateRoute> <Secret></Secret> </PrivateRoute>
             }
         ]
         
