@@ -8,6 +8,9 @@ import Login from '../Pages/Login/Login';
 import SignUp from '../Pages/SignUp/SignUp';
 import PrivateRoute from './PrivateRoute';
 import Secret from '../components/Secret/Secret';
+import Dashboard from '../Layout/Dashboard';
+import MyCart from '../Pages/Dashboard/MyCart/MyCart';
+import CardDetails from '../components/CardDetails/CardDetails';
 
 export const router =createBrowserRouter([
     {
@@ -24,7 +27,8 @@ export const router =createBrowserRouter([
             },
             {
                 path:'/courses',
-                element: <Our_courses></Our_courses>
+                element: <Our_courses></Our_courses>,
+                
             },
             {
                 path:'login',
@@ -41,5 +45,15 @@ export const router =createBrowserRouter([
         ]
         
     },
+    {
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
+            {
+path: 'mycart',
+element: <MyCart></MyCart>
+            }
+        ]
+    }
 
 ])

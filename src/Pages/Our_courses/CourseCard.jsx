@@ -82,8 +82,9 @@ const CourseCard = ({course}) => {
         </div>
         <div className="text-sm font-bold">${course.price}</div>
       </div>
-          <div onClick={()=>handleCourseCard(course)} className="card-actions justify-end my-2">
-            <button className="bg-teal-600 py-3 px-2 text-white font-medium rounded-md">Buy Now</button>
+          <div className="card-actions justify-between items-center my-2">
+          <h2 className='underline cursor-pointer text-blue-600 font-medium font-monospace font-extralight'>More Details</h2>
+            <button onClick={()=>handleCourseCard(course)} className="bg-teal-600 py-3 px-2 text-white font-medium rounded-md">Buy Now</button>
           </div>
         </div>
       </div>

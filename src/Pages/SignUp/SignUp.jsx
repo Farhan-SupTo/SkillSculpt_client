@@ -1,14 +1,16 @@
 import Lottie from 'lottie-react';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import animation from '../../assets/Animation - 1704782399059.json'
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { AuthContext } from '../../Providers/AuthProviders/AuthProviders';
 import Swal from 'sweetalert2';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
+import { AuthContext } from '../../Providers/AuthProviders/AuthProviders';
 
 const SignUp = () => {
 
     const {createUser,updateUserProfile} =useContext(AuthContext)
+
     const {
       register,
       handleSubmit,
@@ -18,36 +20,49 @@ const SignUp = () => {
     const navigate =useNavigate()
     
  
-    const onSubmit = data => {
-      console.log(data);
-      createUser(data.email, data.password)
-          .then(result => {
-              const loggedUser = result.user;
-              console.log(loggedUser);
-              updateUserProfile(data.name, data.photoURL)
-                  .then(() => {
-                      console.log('user profile info updated')
-                      reset();
-                      Swal.fire({
-                          position: 'top-end',
-                          icon: 'success',
-                          title: 'User created successfully.',
-                          showConfirmButton: false,
-                          timer: 1500
-                      });
-                      navigate('/');
-
-                  })
-                  .catch(error => console.log(error))
+    const onSubmit = (data) => {
+      // console.log(data)
+      createUser(data.email,data.password)
+      .then(result=>{ 
+        const loggedUser =result.user 
+        console.log(loggedUser)
+        updateUserProfile(data.name,data.photo)
+        .then(()=>{
+          const savedUser ={email:data.email,name:data.name}
+          fetch('http://localhost:5000/users',{
+            method:'POST',
+            headers: {
+               'content-type':'application/json',
+            },
+            body:JSON.stringify(savedUser)
           })
-  };
+          .then(res=>res.json())
+          .then(data=>{
+            if(data.insertedId){
+              reset()
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Your work has been saved",
+                showConfirmButton: false,
+                timer: 1500
+              });
+              navigate('/');
+            }
+  
+          })
+        })
+        .catch(error => console.log(error))
+      })
+    }
+  
       
     
       
     
    
     return (
-        <div className='container mx-auto pt-20'>
+        <div className='container mx-auto pt-4'>
             <div className="hero min-h-screen bg-base-200 md:p-32 sm:p-10">
   <div className="hero-content flex-col md:flex-row-reverse">
     <div className="text-center md:text-left">
@@ -60,15 +75,15 @@ const SignUp = () => {
           <label className="label">
             <span className="label-text">Enter Your Name</span>
           </label>
-          <input type="text" name='name' {...register("name", { required: true })} placeholder="Name" className="input input-bordered"/>
+          <input  type="text" name='name' {...register("name", { required: true })} placeholder="Name" className="input input-bordered"/>
           {errors.name && <span className='text-red-500'>Name is required</span>}
         </div>
         <div className="form-control">
                 <label className="label">
                   <span className="label-text font-bold">Photo URL</span>
                 </label>
-                <input type="text" {...register("PhotoURL", { required: true })} placeholder="Photo_URL" className="input input-bordered" />
-                {errors.PhotoURL && <span className='text-red-500'>Photo URL is required</span>}
+                <input   type="text" {...register("photo", { required: true })} placeholder="Photo_URL" className="input input-bordered" />
+                {errors.photo && <span className='text-red-500'>Photo URL is required</span>}
               </div>
         <div className="form-control">
           <label className="label">
@@ -97,12 +112,16 @@ const SignUp = () => {
         </div>
         <div className="form-control mt-6">
         
-          <input type="submit"  className="bg-teal-600 cursor-pointer py-4 rounded-sm font-medium text-white tracking-wider" value="SIGN UP" />
+          <input type="submit"  className="bg-teal-600 cursor-pointer py-2 rounded-sm font-medium text-white tracking-wider" value="SIGN UP" />
         </div>
       </form>
       <p className='text-center my-4'><small>Already Have an Account?<Link className='font-bold underline' to='/login'> Sign In</Link></small></p>
+      <SocialLogin></SocialLogin>
     </div>
+    
+    
   </div>
+  
 </div>
         </div>
     );

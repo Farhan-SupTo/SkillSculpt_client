@@ -39,7 +39,7 @@ const Navbar = () => {
       </li>
 
       <li>
-        <Link>
+        <Link to='/dashboard/mycart'>
         <button className="btn">
         <FaShoppingBag className="h-10 text-teal-600 text-lg"></FaShoppingBag>
   <div className="badge badge-secondary">+{cart?.length || 0}</div>
@@ -50,7 +50,12 @@ const Navbar = () => {
       {user ? 
         <>
           <li>
-            <span>{user?.displayName}</span>
+            {/* <span>{user?.displayName}</span> */}
+            <div className="avatar pt-2">
+  <div className="w-8 rounded-full ring  ring-teal-600 ring-offset-2">
+    <img src={user?.photoURL} />
+  </div>
+</div>
           </li>
           <li>
           <button className="py-3 px-6 font-bold text-sm border border-solid rounded-lg border-gray hover:bg-teal-700 hover:text-white hover:border-none">
@@ -117,7 +122,7 @@ const Navbar = () => {
               initial={{ x: -500, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className="fixed h-44 w-full top-0 left-0 z-20 bg-Teal text-white flex  px-2 flex-col justify-center items-center shadow-lg"
+              className="fixed h-80 w-2/3 top-0 left-0 z-20 bg-teal-700 text-white flex   px-10 py-2 flex-col shadow-lg"
             >
          {navOption}
               <HiX
