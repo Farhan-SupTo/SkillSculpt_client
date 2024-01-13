@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AiOutlineStar, AiOutlineUser } from 'react-icons/ai';
 import { AuthContext } from '../../Providers/AuthProviders/AuthProviders';
 import Swal from 'sweetalert2';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import UseCart from '../../Hooks/UseCart';
 
 const CourseCard = ({course}) => {
@@ -83,8 +83,8 @@ const CourseCard = ({course}) => {
         <div className="text-sm font-bold">${course.price}</div>
       </div>
           <div className="card-actions justify-between items-center my-2">
-          <h2 className='underline cursor-pointer text-blue-600 font-medium font-monospace font-extralight'>More Details</h2>
-            <button onClick={()=>handleCourseCard(course)} className="bg-teal-600 py-3 px-2 text-white font-medium rounded-md">Buy Now</button>
+          <Link to={`/courses/${course._id}`} className='underline cursor-pointer text-blue-600 font-medium font-monospace font-extralight'>More Details</Link>
+            <button onClick={()=>handleCourseCard(course)} className="bg-teal-600 py-3 px-2 text-white font-medium rounded-md">Book Now</button>
           </div>
         </div>
       </div>

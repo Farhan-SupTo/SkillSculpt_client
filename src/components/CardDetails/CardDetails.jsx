@@ -3,7 +3,7 @@ import React from 'react';
 const CardDetails = () => {
     return (
         <div>
-            card details comming
+            card details coming
         </div>
     );
 };

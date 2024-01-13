@@ -1,83 +1,93 @@
 [
     {
-       " id":" 1",
+       "id":" 1",
         "image": "https://www.acelema.com/blog/wp-content/uploads/2022/07/1_5IYtIe5OwxeoYXi226J-Uw.jpeg",
         "category": "Web Design",
-       " title": "The Complete Web Design Course",
+       "title": "The Complete Web Design Course",
         "rating": 4.9,
         "participants": 100,
-        "price": 105
+        "price": 105,
+        "details": "Web designing is the process of planning, conceptualizing, and implementing the plan for designing a website in a way that is functional and offers a good user experience. User experience is central to the web designing process. Websites have an array of elements presented in ways that make them easy to navigate. Web designing essentially involves working on every attribute of the website that people interact with, so that the website is simple and efficient, allows users to quickly find the information they need, and looks visually pleasing. All these factors, when combined, decide how well the website is designed."
       },
       {
-       " id": "2",
+       "id": "2",
         "image": "https://www.peerbits.com/static/6c4dcb6b85772db4b733e5eec6ccf308/77381/full-stack-development-main.jpg",
         "category": "Web Development",
-       " title": "FullStack Web Development Course",
+       "title": "FullStack Web Development Course",
         "rating": 4.8,
         "participants": 650,
-        "price": 125
+        "price": 125,
+        "details":"A full stack developer requires skills such as Front-end Languages and Frameworks (HTML, CSS, JavaScript), Backend Technologies and Frameworks (NodeJS, ExpressJS, Django, Flask, C++), Database Management Systems (MySQL, SQL SERVER and PostgreSQL, MongoDB, and Oracle Database), Version Control, and Web Hosting Platforms."
       },
       {
-       " id": "3",
+       "id": "3",
         "image": "https://blog.eduonix.com/wp-content/uploads/2018/09/Scientific-Python-Scipy-696x500.jpg",
         "category": "Web Development",
-       " title": "Python Beginner to Advanced Course",
+       "title": "Python Beginner to Advanced Course",
         "rating": 4.9,
         "participants": 130,
-        "price": 99
+        "price": 99,
+        "details":"Python is used for server-side web development, software development, mathematics, and system scripting, and is popular for Rapid Application Development and as a scripting or glue language to tie existing components because of its high-level, built-in data structures, dynamic typing, and dynamic binding. Program maintenance costs are reduced with Python due to the easily learned syntax and emphasis on readability. Additionally, Python's support of modules and packages facilitates modular programs and reuse of code. Python is an open source community language, so numerous independent programmers are continually building libraries and functionality for it."
+        
       },
       {
-       " id": "4",
+       "id": "4",
         "image": "https://miro.medium.com/v2/resize:fit:682/1*j7TiBo6BraFMeXme9BHCcw.jpeg",
         "category": "Web Design",
-       " title": "UI/UX Design Crazy Course With Harrys",
+       "title": "UI/UX Design Crazy Course With Harrys",
         "rating": 4.7,
         "participants": 630,
-        "price":85
+        "price":85,
+        "details":"User experience (UX) refers to the user’s journey when interacting with a product or service. UX design is the process of creating products or services that provide meaningful experiences for users, involving many different areas of product development including branding, usability, function, and design. One way to think of UX design is to consider the entire process or journey a user experiences when interacting with a product or service. How is the user introduced to the service or product — through advertising, blogs, or something else? What kind of interaction does the user have with the brand? How does the user feel after the interaction? All of these questions and more are key considerations within UX design."
       },
       {
-       " id": "5",
+       "id": "5",
         "image": "https://miro.medium.com/v2/resize:fit:1000/1*HWNPwEQXQktLwbemoEjLPg.jpeg",
         "category": "AI Development",
-       " title": "AI Development With Python (complete beginner course)",
+       "title": "AI Development With Python (complete beginner course)",
         "rating": 4.9,
         "participants": 150,
-        "price": 105
+        "price": 105,
+        "details":"Python can be described as an Interpreted language, which is, in simple terms, implies that it doesn't require compilation into machine language instruction prior to execution, and it is able to be utilized by the programmer directly to execute the program. This makes it a sufficient language to be used using an emulator or a virtual machine that is based on an existing machine's native code that is the language that hardware can understand. It is a High-Level Programming language that is employed in complex scenarios. High-level languages handle arrays, variables, objects, and complex arithmetic, Boolean expressions, as well as other abstract concepts in computer science in order to be more complete and thereby increase their use."
       },
       {
-       " id": "6",
+       "id": "6",
         "image":"https://d1m75rqqgidzqn.cloudfront.net/wp-data/2020/07/13022153/BLOG-Images_7-7-2020-06.png",
         "category": "Web Design",
-       " title": "C Programming",
+       "title": "C Programming",
         "rating": 4.9,
         "participants": 200,
-        "price": 105
+        "price": 105,
+        "details":"C is an imperative procedural language, supporting structured programming, lexical variable scope, and recursion, with a static type system. It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support."
       },
       {
-       " id": "7",
+       "id": "7",
         "image": "https://images.prismic.io//intuzwebsite/2caf3e7f-1704-42e2-908f-3d089da3e3ac_The+Ultimate+Guide+to+Android+App+Development.png?w=1200&q=75&auto=format,compress&fm=png8",
         "category": "Web Design",
-       " title": "Android App Development",
+       "title": "Android App Development",
         "rating": 4.9,
         "participants": 50,
-        "price": 105
+        "price": 105,
+        "details":"Android apps can be written using Kotlin, the Java programming language, and C++ languages. The Android SDK tools compile your code along with any data and resource files into an APK or an Android App Bundle.An Android package, which is an archive file with an .apk suffix, contains the contents of an Android app required at runtime, and it is the file that Android-powered devices use to install the app.An Android App Bundle, which is an archive file with an .aab suffix, contains the contents of an Android app project, including some additional metadata that isn't required at runtime. An AAB is a publishing format and can't be installed on Android devices. It defers APK generation and signing to a later stage."
       },
       {
-       " id": "8",
+       "id": "8",
         "image":"https://img-c.udemycdn.com/course/750x422/5167442_873c.jpg",
         "category": "Web Design",
-       " title": "MySQL",
+       "title": "MySQL",
         "rating": 4.9,
         "participants": 200,
-        "price": 105
+        "price": 105,
+        "details":"A relational database stores data in separate tables rather than putting all the data in one big storeroom. The database structure is organized into physical files optimized for speed. The logical data model, with objects such as data tables, views, rows, and columns, offers a flexible programming environment. You set up rules governing the relationships between different data fields, such as one to one, one to many, unique, required, or optional, and “pointers” between different tables. The database enforces these rules so that with a well-designed database your application never sees data that’s inconsistent, duplicated, orphaned, out of date, or missing."
       },
       {
-       " id": "9",
+       "id": "9",
         "image":"https://www.forbesindia.com/media/images/2023/Sep/img_218619_algorithm.jpg",
         "category": "Programming",
-       " title": "Algorithm",
+       "title": "Algorithm",
         "rating": 4.6,
         "participants": 300,
-        "price": 155
+        "price": 155,
+        "details":"An algorithm is a procedure used for solving a problem or performing a computation. Algorithms act as an exact list of instructions that conduct specified actions step by step in either hardware- or software-based routines.Algorithms are widely used throughout all areas of IT. In mathematics, computer programming and computer science, an algorithm usually refers to a small procedure that solves a recurrent problem. Algorithms are also used as specifications for performing data processing and play a major role in automated systems."
       }
 ]

@@ -11,6 +11,8 @@ import Secret from '../components/Secret/Secret';
 import Dashboard from '../Layout/Dashboard';
 import MyCart from '../Pages/Dashboard/MyCart/MyCart';
 import CardDetails from '../components/CardDetails/CardDetails';
+import CourseCard from '../Pages/Our_courses/CourseCard';
+import CourseCardDetails from '../Pages/CourseCardDetails/CourseCardDetails';
 
 export const router =createBrowserRouter([
     {
@@ -28,6 +30,12 @@ export const router =createBrowserRouter([
             {
                 path:'/courses',
                 element: <Our_courses></Our_courses>,
+                
+            },
+            {
+                path:'/courses/:id',
+                element: <CourseCardDetails></CourseCardDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
                 
             },
             {
