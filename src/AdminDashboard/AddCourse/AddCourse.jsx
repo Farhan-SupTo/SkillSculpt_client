@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Secret = () => {
+const AddCourse = () => {
     return (
         <div>
-            secret
+            Add Course
         </div>
     );
 };
 
-export default Secret;
+export default AddCourse;

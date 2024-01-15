@@ -7,12 +7,16 @@ import Our_courses from '../Pages/Our_courses/Our_courses';
 import Login from '../Pages/Login/Login';
 import SignUp from '../Pages/SignUp/SignUp';
 import PrivateRoute from './PrivateRoute';
-import Secret from '../components/Secret/Secret';
+import Secret from '../AdminDashboard/Secret/Secret';
 import Dashboard from '../Layout/Dashboard';
 import MyCart from '../Pages/Dashboard/MyCart/MyCart';
 import CardDetails from '../components/CardDetails/CardDetails';
 import CourseCard from '../Pages/Our_courses/CourseCard';
 import CourseCardDetails from '../Pages/CourseCardDetails/CourseCardDetails';
+import AllUser from '../AdminDashboard/AllUser/AllUser';
+import AddCourse from '../AdminDashboard/AddCourse/AddCourse';
+import UpdateCourse from '../AdminDashboard/UpdateCourse/UpdateCourse';
+import ContactUs from '../Pages/ContactUs/ContactUs';
 
 export const router =createBrowserRouter([
     {
@@ -47,9 +51,10 @@ export const router =createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
-                path:'secret',
-                element: <PrivateRoute> <Secret></Secret> </PrivateRoute>
-            }
+                path:'contactus',
+                element: <ContactUs></ContactUs>
+            },
+        
         ]
         
     },
@@ -58,8 +63,24 @@ export const router =createBrowserRouter([
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
             {
-path: 'mycart',
-element: <MyCart></MyCart>
+              path: 'mycart',
+              element: <MyCart></MyCart>
+            },
+            {
+              path: 'admin',
+              element: <PrivateRoute> <Secret></Secret> </PrivateRoute>
+            },
+            {
+              path: 'allusers',
+              element: <AllUser></AllUser>
+            },
+            {
+              path: 'addcourse',
+              element: <AddCourse></AddCourse>
+            },
+            {
+              path: 'updatecourse',
+              element: <UpdateCourse></UpdateCourse>
             }
         ]
     }

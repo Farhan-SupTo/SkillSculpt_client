@@ -7,7 +7,7 @@ const CourseCardDetails = () => {
         category,details} =courses
     return (
         <div className='container  mx-auto pt-20'>
-            <div className="card card-side w- bg-base-100 text-start items-start shadow-xl h-auto container mx-auto mb-10">
+            <div className="card  flex flex-col card-side bg-base-100 text-start items-start shadow-xl h-2/3 container mx-auto mb-10">
   <figure><img className='p-10 w-full' src={image} alt="Movie"/></figure>
   <div className="card-body w-full">
     <h2 className="card-title text-3xl text-slate-600">{title}</h2>

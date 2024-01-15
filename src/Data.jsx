@@ -123,18 +123,18 @@ export const logos = [logo1, logo2, logo3, logo4, logo5, logo6];
 export const accordions = [
   {
     id: 1,
-    title: "What is Skillex?",
+    title: "What is SkillSculpt?",
   },
   {
     id: 2,
-    title: "What can I learn from Skillex?",
+    title: "What can I learn from SkillSculpt?",
   },
   {
     id: 3,
-    title: "Can I teach on Skillex?",
+    title: "Can I teach on SkillSculpt?",
   },
   {
     id: 4,
-    title: "What is included in my Skillex membership?",
+    title: "What is included in my SkillSculpt membership?",
   },
 ];

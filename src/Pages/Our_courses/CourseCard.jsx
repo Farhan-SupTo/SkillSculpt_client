@@ -67,7 +67,7 @@ const CourseCard = ({course}) => {
           <h4>{category}</h4>
           <h2 className="card-title">{course.title
 }</h2>
-<div className="flex items-center justify-between">
+<div className="flex  items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="bg-Solitude p-1 rounded-full">
             <AiOutlineUser className="text-Teal" />
