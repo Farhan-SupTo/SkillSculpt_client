@@ -108,7 +108,7 @@ const MyCart = () => {
       </div>
       <div className="divider"></div> 
       
-              <div className="uppercase xs:flex md:flex-row  font-semibold h-[60px] items-center justify-evenly">
+              <div className="uppercase flex xs:flex-col md:flex-row xs:pt-16 xs:items-start  font-semibold h-[60px] items-center justify-evenly">
              <Link to='/courses'> <button className='bg-teal-600 uppercase text-lg mb-5 text-white py-2 rounded px-6 '>Add More Item</button></Link>
         <h3 className="text-3xl">Total Items: {cart.length}</h3>
         <h3 className="text-3xl">Total Price: ${Total}</h3>

@@ -10,22 +10,22 @@ import Swal from "sweetalert2";
 const AllUser = () => {
 //   const [axiosSecure] =useAxiosSecure()
 
-    //  const {data: users= [], refetch } =useQuery({
-    //     queryKey: ["users"], 
-    //     queryFn: async () =>{
-    //     const res = await fetch('http://localhost:5000/users')
-    //     return res.json()
-    //     }
-    
-    //  })
-     const { refetch,data: users =[]} = useQuery({
-        queryKey: ['users'],
-        queryFn: async ()=>{
-            const res = await axiosSecure.get('/users')
-            return res.data
-
+     const {data: users= [], refetch } =useQuery({
+        queryKey: ["users"], 
+        queryFn: async () =>{
+        const res = await fetch('http://localhost:5000/users')
+        return res.json()
         }
-      })
+    
+     })
+    //  const { refetch,data: users =[]} = useQuery({
+    //     queryKey: ['users'],
+    //     queryFn: async ()=>{
+    //         const res = await axiosSecure.get('/users')
+    //         return res.data
+
+    //     }
+    //   })
       const handleDelete =() =>{
 
       }

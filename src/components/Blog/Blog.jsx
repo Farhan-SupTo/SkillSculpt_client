@@ -68,7 +68,7 @@ const Blog = () => {
               <div className='details space-y-3'>
                 <div className='tag flex items-center'>
                   <AiOutlineTags className='icon' />
-                  <a className='text-violet-400 pl-2' href='/'>#{item.category}</a>
+                  <a className=' pl-2' href='/'>#{item.category}</a>
                 </div>
                 
                   <h3>{item.title}</h3>

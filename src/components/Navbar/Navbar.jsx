@@ -3,8 +3,9 @@ import { HiMenuAlt1, HiX } from "react-icons/hi";
 import { FaShoppingBag } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProviders/AuthProviders";
 import UseCart from "../../Hooks/UseCart";
+import { AuthContext } from "../../Providers/AuthProviders/AuthProviders"; 
+import logo from '../../../public/logo.svg';
 
 
 const Navbar = () => {
@@ -109,9 +110,14 @@ const Navbar = () => {
               className="text-3xl sm:hidden cursor-pointer"
               onClick={() => setToggle(true)}
             />
-            <div className="text-xl text-Teal uppercase tracking-wide font-bold">
+           <div className="flex items-center gap-1">
+           <img src={logo} alt="" />
+           <div className="text-xl text-Teal uppercase tracking-wide font-bold">
            SkillSculpt
+          
             </div>
+           
+           </div>
           </div>
           <div className="sm:flex items-center hidden">
            {navOption}
