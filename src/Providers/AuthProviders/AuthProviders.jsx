@@ -46,7 +46,7 @@ const AuthProviders = ({children}) => {
            console.log('currentUser',currentUser)
         //    setLoading(false)
          if(currentUser){
-           axios.post('http://localhost:5000/jwt',{
+           axios.post('https://education-server-ten.vercel.app/jwt',{
                email:currentUser.email
            })
            .then(data=>{

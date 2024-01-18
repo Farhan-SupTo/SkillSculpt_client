@@ -39,7 +39,7 @@ export const router =createBrowserRouter([
             {
                 path:'/courses/:id',
                 element: <CourseCardDetails></CourseCardDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/courses/${params.id}`)
+                loader: ({params}) => fetch(`https://education-server-ten.vercel.app/courses/${params.id}`)
                 
             },
             {

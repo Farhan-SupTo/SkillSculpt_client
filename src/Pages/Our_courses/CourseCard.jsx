@@ -21,7 +21,7 @@ const CourseCard = ({course}) => {
       const OrderCartItem ={courseMenuID:_id,title,image,price,email:user.email}
 
 
-      fetch('http://localhost:5000/carts',
+      fetch('https://education-server-ten.vercel.app/carts',
       {
         method:'POST',
         headers:{

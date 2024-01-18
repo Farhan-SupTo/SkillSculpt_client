@@ -19,7 +19,7 @@ const SocialLogin = () => {
             console.log(loggedUser)
             const savedUser ={email:loggedUser.email,name:loggedUser.displayName}
             
-            fetch('http://localhost:5000/users',{
+            fetch('https://education-server-ten.vercel.app/users',{
                 method:'POST',
                 headers: {
                    'content-type':'application/json',
