@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import UseCart from '../../../Hooks/UseCart';
 import { FaTrashAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../Providers/AuthProviders/AuthProviders';
 
@@ -10,6 +10,11 @@ const MyCart = () => {
     const [cart,refetch] =UseCart()
     console.log(cart);
     const Total = cart.reduce((sum, item) => item.price + sum, 0);
+
+    const location =useLocation()
+    const navigate =useNavigate()
+
+    const  from = location.state?.from?.pathname || "/";
 
     const handleDelete = item =>{
         Swal.fire({
@@ -34,6 +39,7 @@ const MyCart = () => {
                     text: "Your file has been deleted.",
                     icon: "success"
                   });
+                  
             }
           })
             }
@@ -50,7 +56,9 @@ const MyCart = () => {
         showConfirmButton: false,
         timer: 1500
       });
- }    
+      
+ }   
+ navigate(from, { replace: true }); 
     return (
         <div className='sm:text-[2.5rem] text-[1.825rem] items-center container mx-auto pt-20'>
            
