@@ -11,10 +11,10 @@ const MyCart = () => {
     console.log(cart);
     const Total = cart.reduce((sum, item) => item.price + sum, 0);
 
-    const location =useLocation()
+
     const navigate =useNavigate()
 
-    const  from = location.state?.from?.pathname || "/";
+ 
 
     const handleDelete = item =>{
         Swal.fire({
@@ -56,9 +56,10 @@ const MyCart = () => {
         showConfirmButton: false,
         timer: 1500
       });
+      navigate('/')
       
  }   
- navigate(from, { replace: true }); 
+ 
     return (
         <div className='sm:text-[2.5rem] text-[1.825rem] items-center container mx-auto pt-20'>
            
